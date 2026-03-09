@@ -1,63 +1,124 @@
-<div align='center'>
+<div align="center">
 
-# CRUDIFY
+# CRUDIFY - v1.1.0
+
+**Minimal RESTful CRUD API built with FastAPI**
+
+Simple • Containerized • Developer-friendly • GitOps
 
 </div>
 
-# Simple CRUD API
+---
 
-A lightweight RESTful API that implements basic **Create, Read, Update, Delete (CRUD)** operations.
-Built to demonstrate clean architecture, API design fundamentals, and scalable backend patterns.
+## Overview
+
+**CRUDIFY** is a lightweight RESTful API implementing basic **Create, Read, Update, Delete (CRUD)** operations using *
+*FastAPI**.
+
+The project focuses on demonstrating:
+
+* RESTful API design
+* FastAPI fundamentals
+* structured backend development
+* containerized environments using Docker
+* Introduced CI/CD pipeling
+
+The codebase is intentionally minimal and easy to extend.
 
 ---
 
-## Features
+# Features
 
-- Create new records
-- Retrieve single or multiple records
-- Update existing records
-- Delete records
-- RESTful routing conventions
-- Structured error handling
-- Input validation
-- Environment-based configuration
-
----
-
-## Tech Stack
-
-- Backend: FastAPI
-- Database: MongoDB
-- ORM/ODM: Mongoose
-- API Testing: Postman
-- CI/CD: GitHub Actions
+* Create records
+* Retrieve records
+* Update records
+* Delete records
+* Input validation with Pydantic
+* Structured error handling
+* Docker containerization
+* Docker Compose orchestration
+* CI/CD pipeline
 
 ---
 
-## Installation
+# Tech Stack
+
+| Layer             | Technology     |
+|-------------------|----------------|
+| Backend Framework | FastAPI        |
+| Server            | Uvicorn        |
+| Validation        | Pydantic       |
+| Containerization  | Docker         |
+| Orchestration     | Docker Compose |
+| API Testing       | Postman        |
+| CI/CD             | GitHub Actions |
+
+---
+
+# Running with Docker (Recommended)
+
+Build and start the containers:
 
 ```bash
-# Clone repository
-git clone https://github.com/dsrathore1/Crudify.git
-
-# Navigate to project
-cd Crudify
-
-# Install dependencies
-pip install --no-cache-dir -r requirements.txt
-
-# Run the server
-uvicorn main:app --reload
-
-# Server run on:
-http://localhost:8080
+docker-compose up --build
 ```
+
+The API will be available at:
+
+```
+http://0.0.0.0:8000
+```
+
+---
+
+# Running Locally
+
+Install dependencies:
+
+```bash
+pip install --no-cache-dir -r requirements.txt
+```
+
+Start the development server:
+
+```bash
+uvicorn main:app --reload --port 8000
+```
+
+---
+
+# API Documentation
+
+FastAPI automatically generates interactive documentation.
+
+Swagger UI
+
+```
+http://0.0.0.0:8000/docs
+```
+
+ReDoc
+
+```
+http://0.0.0.0:8000/redoc
+```
+
+---
 
 # Future Improvements
 
-- Pagination & filtering
-- Rate limiting
-- Caching layer
-- Unit & integration testing
-- Dockerization
-- CI/CD pipeline
+- Pagination & filtering 🔃
+- Rate limiting 🔃
+- Caching layer ✅
+- Unit & integration testing ✅
+- Dockerization ✅
+- CI/CD pipeline ✅
+
+---
+
+<div align="center">
+
+
+*Thank you* ❤️
+
+</div>
